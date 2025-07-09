@@ -36,7 +36,7 @@ export default function LoginPage() {
     try {
       const response = await getUser(data);
         if (response) {
-        router.push("/usuarios");
+        router.push("/");
         toast.success("Login realizado com sucesso!");
       }
     } catch {

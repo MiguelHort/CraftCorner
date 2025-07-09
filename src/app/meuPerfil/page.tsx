@@ -5,6 +5,7 @@ import Image from "next/image";
 import Header from "@/components/header";
 import { Button } from "@/components/ui/button";
 import { UserCircle } from "lucide-react";
+import Link from "next/link";
 
 type Post = {
   id: number;
@@ -36,11 +37,13 @@ export default function MeuPerfil() {
       <div className="flex flex-1">
         <aside className="w-1/4 bg-gray-200 p-6 flex flex-col items-center border-r">
           <UserCircle className="w-32 h-32 text-gray-600 mb-4" />
-          <h2 className="text-2xl font-bold text-red-700">Nome</h2>
-          <p className="text-gray-500 mb-2">email</p>
+          <h2 className="text-2xl font-bold text-red-700">Roger Klock</h2>
+          <p className="text-gray-500 mb-2">roger.klock@caolicasc.edu.br</p>
           <p className="text-gray-500 mb-4">Posts</p>
           <Button className="bg-red-700 hover:bg-red-800 text-white px-6 py-2 rounded-lg text-lg">
-            Novo Post
+            <Link href="/criarPost">
+              Novo Post
+            </Link>
           </Button>
         </aside>
 
